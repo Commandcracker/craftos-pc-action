@@ -1,0 +1,16 @@
+name: "build archives"
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build-archives:
+        runs-on: "ubuntu-latest"
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: "run cc"
+              uses: "./"
+              with:
+                  root: "cc"
+                  timeout: "60"

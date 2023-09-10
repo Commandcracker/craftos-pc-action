@@ -1,0 +1,9 @@
+name: CraftOS-PC action
+
+branding:
+  icon: terminal
+  color: white
+
+runs:
+  using: docker
+  image: Dockerfile
