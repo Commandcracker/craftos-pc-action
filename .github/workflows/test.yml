@@ -1,0 +1,25 @@
+name: test
+
+on:
+    workflow_dispatch:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: run CraftOS-PC-Action
+              uses: ./
+              with:
+                  root: test
+                  timeout: 1
+                  id: 42
+                  luajit: true
+                  #disable_tweaks: true
+                  #disable_default_settings: true
+                  #disable_root: true
+                  #directory: ./directory
+                  #disable_headless: true
+                  #disable_timeout_verbose: true
