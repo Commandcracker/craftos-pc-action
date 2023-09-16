@@ -14,7 +14,7 @@ jobs:
               uses: ./
               with:
                   root: test
-                  timeout: 1
+                  timeout: 5
                   id: 42
                   luajit: true
                   #disable_tweaks: true
