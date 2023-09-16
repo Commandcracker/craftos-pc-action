@@ -2,8 +2,6 @@
 
 GitHub Action for [CraftOS-PC].
 
-TODO: CCEmuX support ? (maybe as another action)
-
 ## CraftOS-PC Tweaks
 
 CraftOS-PC-Action runs some tweaks in order to improve the styling of the output.
