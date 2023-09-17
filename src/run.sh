@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Ensure that default values are set
+if [[ -z $TIMEOUT_SIGNAL ]]; then
+    TIMEOUT_SIGNAL="HUP"
+fi
+
+if [[ -z $ROOT ]]; then
+    ROOT="./"
+fi
+
+if [[ -z $TIMEOUT ]]; then
+    TIMEOUT="60"
+fi
+
+# Setup variables
 if [[ -z $LUAJIT ]]; then
     COMMAND="craftos"
 else
@@ -38,6 +52,7 @@ if [[ -z $DISABLE_TIMEOUT_VERBOSE ]]; then
     TIMEOUT_VERBOSE="--verbose"
 fi
 
+# Run CraftOS-PC
 timeout --signal=$TIMEOUT_SIGNAL $TIMEOUT_VERBOSE $TIMEOUT_ARGUMENTS $TIMEOUT $COMMAND \
     $HEADLESS $SINGLE \
     $MOUNT_ROOT \
