@@ -37,4 +37,3 @@ jobs:
                   branch: "chore/auto-doc-update-readme"
                   commit-message: "auto-doc: Updated README.md"
                   body: "auto-doc: Updated README.md"
-                  token: ${{ secrets.GITHUB_TOKEN }}
