@@ -23,3 +23,9 @@ Here is an example of how to properly configure the settings file:
 [settings]: https://tweaked.cc/module/settings.html
 [CraftOS-PC]: https://github.com/MCJack123/craftos2
 [craftos-pc-tweaks]: https://github.com/Commandcracker/craftos-pc-tweaks
+
+## Inputs
+
+<!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
+No inputs.
+<!-- AUTO-DOC-INPUT:END -->
