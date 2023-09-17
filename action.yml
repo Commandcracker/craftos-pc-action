@@ -64,7 +64,6 @@ inputs:
     timeout_arguments:
         description: Defines additional timeout arguments.
         required: false
-    # TODO: easys way to edit craftos pc configuration
 
 runs:
     using: docker
