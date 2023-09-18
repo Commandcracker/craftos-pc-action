@@ -8,6 +8,10 @@ branding:
     color: white
 
 inputs:
+    root:
+        description: The root directory of the craftos-pc containg a startup.lua
+        required: false
+        default: "./"
     timeout:
         description:
             Specifies the maximum amount of time that the action will run before timing out.
@@ -16,26 +20,19 @@ inputs:
             A duration of 0 disables the associated timeout.
         required: false
         default: "60"
-    options:
-        description: These are the options that will be passed to CraftOS-PC
-        required: false
-    luajit:
-        description: Setting this will use CraftOS-PC Accelerated (with LuaJIT) instead of default CraftOS-PC (with PUC Lua)
-        required: false
-    root:
-        description: The root directory of the craftos-pc containg a startup.lua
-        required: false
-        default: "./"
-    directory:
-        description: Sets the directory that stores user data
-        required: false
     disable_root:
         description:
             This will disable mounting the root directory making the root input useless.
             Use this if root files are mounted with user data directory.
         required: false
-    id:
-        description: Sets the ID of the computer that will launch
+    directory:
+        description: Sets the directory that stores user data
+        required: false
+    luajit:
+        description: Setting this will use CraftOS-PC Accelerated (with LuaJIT) instead of default CraftOS-PC (with PUC Lua)
+        required: false
+    options:
+        description: These are the options that will be passed to CraftOS-PC
         required: false
     disable_tweaks:
         description: Setting this will dsiable all CraftOS-PC-Tweaks
@@ -44,16 +41,8 @@ inputs:
         description: Setting this will dsiable all default CraftOS-PC settings.
             This is required if you want to delete .settings for some odd reason.
         required: false
-    disable_headless:
-        description: Setting this will disable the headless render mode.
-            It is not recommended to do this unless you know what you are doing.
-        required: false
-    disable_single:
-        description: Setting this will disable the single window render mode.
-            It is not recommended to do this unless you know what you are doing.
-        required: false
-    disable_timeout_verbose:
-        description: This will disable verbose timeout, not printing if a timeout accoured.
+    id:
+        description: Sets the ID of the computer that will launch
         required: false
     timeout_signal:
         description: specify the signal to be sent on timeout;
@@ -61,8 +50,19 @@ inputs:
             see 'kill -l' for a list of signals
         required: false
         default: "HUP"
+    disable_timeout_verbose:
+        description: This will disable verbose timeout, not printing if a timeout accoured.
+        required: false
     timeout_arguments:
         description: Defines additional timeout arguments.
+        required: false
+    disable_single:
+        description: Setting this will disable the single window render mode.
+            It is not recommended to do this unless you know what you are doing.
+        required: false
+    disable_headless:
+        description: Setting this will disable the headless render mode.
+            It is not recommended to do this unless you know what you are doing.
         required: false
 
 runs:

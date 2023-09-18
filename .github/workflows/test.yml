@@ -13,13 +13,17 @@ jobs:
             - name: run CraftOS-PC-Action
               uses: ./
               with:
-                  root: test
+                  root: ./test
                   timeout: 5
-                  id: 42
+                  #disable_root: true
+                  #directory: ./cc
                   luajit: true
+                  #options: --exec print('Hello, World!')
                   #disable_tweaks: true
                   #disable_default_settings: true
-                  #disable_root: true
-                  #directory: ./directory
-                  #disable_headless: true
+                  id: 42
+                  #timeout_signal: "KILL"
                   #disable_timeout_verbose: true
+                  #timeout_arguments: "--preserve-status"
+                  #disable_single: true
+                  #disable_headless: true
