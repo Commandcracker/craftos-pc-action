@@ -29,36 +29,36 @@ Here is an example of how to properly configure the settings file:
 ```yml
 name: CraftOS-PC Action
 on:
-  push:
-    branches:
-      - main
+    workflow_dispatch:
+    push:
+        #branches:
+            #- main
 
 jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
+    publish:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v4
 
-    - name: CraftOS-PC Action
-        uses: Commandcracker/craftos-pc-action@v1
-        with:
-            # Example inputs ordered by usefulness
-            #root: ./src
-            #timeout: 1m
-            #disable_root: true
-            #directory: ./cc
-            #luajit: true
-            #options: --exec print('Hello, World!')
-            #disable_tweaks: true
-            #disable_default_settings: true
-            #id: 42
-            #timeout_signal: "KILL"
-            #disable_timeout_verbose: true
-            #timeout_arguments: "--preserve-status"
-            #disable_single: true
-            #disable_headless: true
-
+            - name: CraftOS-PC >_
+              uses: Commandcracker/craftos-pc-action@v1
+              #with:
+                  # Example inputs ordered by usefulness
+                  #root: ./src
+                  #timeout: 1m
+                  #disable_root: true
+                  #directory: ./cc
+                  #luajit: true
+                  #options: --exec print('Hello, World!')
+                  #disable_tweaks: true
+                  #disable_default_settings: true
+                  #id: 42
+                  #timeout_signal: "KILL"
+                  #disable_timeout_verbose: true
+                  #timeout_arguments: "--preserve-status"
+                  #disable_single: true
+                  #disable_headless: true
 ```
 
 ## Inputs

@@ -2,15 +2,16 @@ name: test
 
 on:
     workflow_dispatch:
+    push:
 
 jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v3
+            - name: Checkout 🛎️
+              uses: actions/checkout@v4
 
-            - name: run CraftOS-PC-Action
+            - name: CraftOS-PC >_
               uses: ./
               with:
                   root: ./test
