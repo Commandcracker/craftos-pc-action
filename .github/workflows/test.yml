@@ -3,6 +3,7 @@ name: test
 on:
     workflow_dispatch:
     push:
+    pull_request:
 
 jobs:
     test:
@@ -11,7 +12,7 @@ jobs:
             - name: Checkout 🛎️
               uses: actions/checkout@v4
 
-            - name: CraftOS-PC >_
+            - name: CraftOS-PC (luajit) >_
               uses: ./
               with:
                   root: ./test
@@ -19,6 +20,24 @@ jobs:
                   #disable_root: true
                   #directory: ./cc
                   luajit: true
+                  #options: --exec print('Hello, World!')
+                  #disable_tweaks: true
+                  #disable_default_settings: true
+                  id: 42
+                  #timeout_signal: "KILL"
+                  #disable_timeout_verbose: true
+                  #timeout_arguments: "--preserve-status"
+                  #disable_single: true
+                  #disable_headless: true
+
+            - name: CraftOS-PC >_
+              uses: ./
+              with:
+                  root: ./test
+                  timeout: 5
+                  #disable_root: true
+                  #directory: ./cc
+                  #luajit: false
                   #options: --exec print('Hello, World!')
                   #disable_tweaks: true
                   #disable_default_settings: true
