@@ -68,7 +68,7 @@ inputs:
 
 runs:
     using: docker
-    image: docker://ghcr.io/commandcracker/craftos-pc-action-image:b3d25a70457a4dddcdb9b640689af8509dc1bad1
+    image: docker://ghcr.io/commandcracker/craftos-pc-action-image:88b4d593cdacc3a06f84b0ff71b73e714c42d02e
     env:
         TIMEOUT: ${{inputs.timeout}}
         OPTIONS: ${{inputs.options}}
